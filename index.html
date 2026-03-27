@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>一份道歉</title>
+    <style>
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+            background:#f7f7f7;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            height:100vh;
+        }
+        .card {
+            background:white;
+            padding:40px 50px;
+            max-width:640px;
+            border-radius:12px;
+            box-shadow:0 10px 30px rgba(0,0,0,0.08);
+            text-align:center;
+        }
+        h1 {
+            margin-bottom:20px;
+            font-size:28px;
+        }
+        p {
+            font-size:16px;
+            line-height:1.9;
+            color:#444;
+            margin-bottom:30px;
+        }
+        button {
+            padding:10px 24px;
+            font-size:16px;
+            border:none;
+            border-radius:6px;
+            cursor:pointer;
+        }
+        #ok {
+            background:#4CAF50;
+            color:white;
+        }
+    </style>
+</head>
+<body>
+<div class="card">
+    <h1>我想认真道个歉</h1>
+    <p>
+        因为我自己的猜测和不信任，<br>
+        说了一些、做了一些让你不舒服的事。<br><br>
+
+        这是我的问题，不是你的。<br>
+        你因此生气、疏远我，都是可以理解的。<br><br>
+
+        我不期待你现在给我任何回应，<br>
+        只是希望你知道：我已经意识到自己的越界，<br>
+        也会在之后的相处中注意分寸和尊重你。
+    </p>
+    <button id="ok">我知道了</button>
+</div>
+
+<script>
+document.getElementById("ok").onclick = () => {
+    document.querySelector(".card").innerHTML = `
+        <h1>谢谢你看到这里</h1>
+        <p>
+            不论之后我们以什么样的方式相处，<br>
+            我都会尊重你的感受和选择。
+        </p>
+    `;
+};
+</script>
+</body>
+</html>
